@@ -4,6 +4,7 @@ from scenedetect import detect, AdaptiveDetector, split_video_ffmpeg
 from moviepy.editor import VideoFileClip, concatenate_videoclips
 from pydub import AudioSegment
 from groq import Groq
+from dotenv import load_dotenv
 
 def process_video(input_path, output_dir):
     """
@@ -85,7 +86,14 @@ def transcribe_with_groq(file_path):
     """
     Use Groq API to transcribe speech to text in English.
     """
-    client = Groq(api_key='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')
+    
+    load_dotenv()
+
+    # Lấy API key từ biến môi trường
+    api_key = os.getenv("GROQ_API_KEY")
+
+    # Sử dụng API key
+    client = Groq(api_key=api_key)
     filename = os.path.basename(file_path)
 
     with open(file_path, "rb") as file:
