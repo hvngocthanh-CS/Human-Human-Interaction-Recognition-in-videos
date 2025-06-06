@@ -23,6 +23,7 @@ The testing scripts and evaluation (including F1 score calculation) are included
 All testing and result analysis were also performed on Kaggle.
 
 ## Demo
+![](https://github.com/hvngocthanh-CS/Human-Human-Interaction-Recognition-in-videos/raw/main/asset/img2.png)
 
 A demo video is available [here](https://drive.google.com/file/d/1AEByp5rkUe1wJWEViZE9I-vDpCbe18rt/view?usp=sharing), showing the model's predicted interaction labels for a single scene (corresponding to one video).  
 All actions recognized in the scene are displayed in the demo.
